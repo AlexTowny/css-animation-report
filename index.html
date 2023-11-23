@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>АНИМАЦИИ В CSS</title>
+</head>
+<body>
+    <div>
+    <h1>Введение</h1>
+    <p> Анимация веб-страниц сегодня стала неотъемлемой частью пользовательского опыта. Одним из мощных инструментов для создания анимаций является CSS, который позволяет легко добавлять движение и стилизацию элементов. Давайте рассмотрим основные принципы анимации с использованием CSS.</p>
+    
+    <p>
+            CSS предоставляет два основных способа создания анимаций: 
+            с использованием ключевых кадров <span class="intr_word">(@keyframes)</span> и 
+            переходов <span class="intr_word">(transition)</span>. Ключевые кадры позволяют определить стили на разных этапах анимации, в то время как переходы добавляют плавные изменения между двумя состояниями элемента.
+        </p>
+        <h1>Трансформации и переходы</h1>
+        <p> 
+            
+CSS предоставляет различные свойства трансформации, такие как <span class="intr_word">translate, rotate, и scale</span>, которые могут быть использованы для создания разнообразных анимаций. Совмещение этих свойств с переходами обеспечивает плавные и привлекательные эффекты.
+</p>
+<h1>Анимация на основе событий:</h1>
+<p>
+Мы можем также запускать анимации в ответ на события, такие как нажатие кнопки или наведение курсора. Для этого используются селекторы состояний <span class="intr_word">(:hover, :active, :focus)</span>.
+        </p>
+    <p> 
+        <h1>Свойства</h1>    
+    <ul>
+    <li>animation shorthand</li>
+    <li>animation-composition  </li>
+    <li>animation-delay </li>
+    <li>animation-direction</li>
+    <li>animation-duration</li>
+    <li>animation-fill-mode</li>
+    <li>animation-iteration-count</li>
+    <li>animation-name</li>
+    <li>animation-play-state</li>
+    <li>animation-timing-function</li>
+    <li>animation-timeline</li>
+</ul>
+    </p>
+    </div>
+    <div class="examples">
+        <div class="example-container">
+    <div class="animation-container">
+        <div class="example1"></div>
+      </div>
+      <div class="code-container">
+        <pre>
+          <code>
+            @keyframes slideRight {
+              from {
+                transform: translateX(0);
+              }
+              to {
+                transform: translateX(100px);
+              }
+            }
+    
+            .example1 {
+              width: 50px;
+              height: 50px;
+              background-color: coral;
+              animation: slideRight 2s ease-in-out infinite;
+            }
+          </code>
+        </pre>
+      </div>
+    </div>
+    </div>
+    <div class="example-container">
+      <div class="animation-container">
+      <div class="example12"></div>
+    </div>
+      <div class="code-container">
+        <pre>
+          <code>
+            @keyframes slideRight2 {
+                from {
+                  transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(500px);  
+                }
+                to {
+                    transform: translateX(0px);;
+                }
+              }
+    
+            .example1 {
+              width: 50px;
+              height: 50px;
+              background-color: coral;
+              animation: slideRight2 2s ease-in-out infinite;
+            }
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="example-container">
+      <div class="animation-container">
+        <div class="example2"></div>
+      </div>
+      <div class="code-container">
+        <pre>
+          <code>
+            .example2 {
+              width: 50px;
+              height: 50px;
+              background-color: dodgerblue;
+              transition: transform 0.5s ease-in-out;
+            }
+    
+            .example2:hover {
+              transform: scale(1.2);
+            }
+            .example2:active{
+                background-color: #2ecc71;
+              }
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="example-container">
+    <div class="animation-container">
+        <div class="circle"></div>
+    </div>
+    <div class="code-container">
+        <code>
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: conic-gradient(
+              from 0deg,
+              #3498db,
+              #e74c3c,
+              #2ecc71,
+              #f39c12,
+              #3498db
+            );
+            animation: rotate 5s linear infinite;
+          }
+        
+          @keyframes rotate {
+            to {
+              transform: rotate(1turn);
+            }
+          }
+        </code>
+    </div>
+    </div>
+
+    <div class="example-container">
+        <div class="animation-container">
+            <div class="circle2"></div>
+        </div>
+        <div class="code-container">
+            <code>
+                .circle2 {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    background: conic-gradient(
+                      from 0deg,
+                      #3498db,
+                      #3498db,
+                      #e74c3c
+                    );
+                    transition: all 0.5s ease-in-out;
+                  }
+                
+                  .circle2:hover {
+                    animation: rotate 5s linear infinite;
+                    border-radius: 10%;
+                    
+                  
+                  }
+                
+                  .circle2:active{
+                    background-color: #2ecc71;
+                  }
+            </code>
+        </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

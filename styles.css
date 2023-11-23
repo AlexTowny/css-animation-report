@@ -1,0 +1,149 @@
+h1{
+    font-size: 2cm;
+    animation: fade 2s ease-in-out infinite;
+  
+}
+
+.intr_word{
+    font-size: 1.2cm;
+    color: chocolate;
+}
+
+p, li{
+    font-size: 1cm;
+    font-family: monospace;
+}
+
+@keyframes fade{
+    from {
+      color:brown;
+    }
+    50%{
+        color: blueviolet;  
+    }
+    to {
+        color:brown;
+    }
+  }
+  
+  body {
+    
+    height: 100vh;
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+.example-container{
+    margin: 50px;
+}
+
+  .animation-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .code-container {
+    flex: 1;
+    padding: 20px;
+    font-size: xx-large;
+    background-color: #f4f4f4;
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+
+  /* Анимация 1: Перемещение вправо */
+  @keyframes slideRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);;
+    }
+  }
+  @keyframes slideRight2 {
+    from {
+      transform: translateX(0);
+    }
+    50%{
+        transform: translateX(500px);  
+    }
+    to {
+        transform: translateX(0px);;
+    }
+  }
+
+  .example1 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    animation: slideRight 2s ease-in-out infinite;
+  }
+  .example12 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    animation: slideRight2 2s ease-in-out infinite;
+  }
+
+  /* Анимация 2: Плавное увеличение */
+  .example2 {
+    width: 150px;
+    height: 150px;
+    background-color: dodgerblue;
+    transition: transform 1.5s  ease-in-out;
+  }
+
+  .example2:hover {
+    transform: scale(1.8);
+  }
+  .example2:active{
+    background-color: #2ecc71;
+  }
+
+  .circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #3498db,
+      #e74c3c,
+      #2ecc71,   
+      #3498db
+    );
+    animation: rotate 5s linear infinite;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .circle2 {
+    margin: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #3498db,
+      #3498db,
+      #e74c3c
+    );
+    transition: all 0.5s ease-in-out;
+  }
+
+  .circle2:hover {
+    animation: rotate 5s linear infinite;
+    border-radius: 10%;
+  
+  }
+
+  
+
+ 
